@@ -26,12 +26,12 @@
       <scope>test</scope>
     </dependency>
 
-    <!-- Apache Commons IO untuk copy file -->
-    <dependency>
+
+    <!-- <dependency>
       <groupId>commons-io</groupId>
       <artifactId>commons-io</artifactId>
       <version>2.13.0</version>
-    </dependency>
+    </dependency> -->
 
   </dependencies>
 
@@ -42,11 +42,14 @@
         <artifactId>maven-surefire-plugin</artifactId>
         <version>3.2.5</version>
         <configuration>
+          <!-- <reportsDirectory>${project.build.directory}/surefire-reports</reportsDirectory> -->
           <suiteXmlFiles>
             <suiteXmlFile>src/test/resources/testng.xml</suiteXmlFile>
           </suiteXmlFiles>
         </configuration>
       </plugin>
+
+
     </plugins>
 
 

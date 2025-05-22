@@ -9,9 +9,9 @@
     <parameter name="expectedSignIn" value="https://www.saucedemo.com/v1/inventory.html"></parameter>
     <classes>
       <class name="com.juaracoding.test.Hook" />
-      <class name="com.juaracoding.test.ScreenshotTest" />
-      <class name="com.juaracoding.test.authentications.SignInWithoutCredential" />
-      <!-- <class name="com.juaracoding.test.authentications.SignInTest" /> -->
+      <class name="com.juaracoding.test.authentications.SignInWithoutUsernameTest" />
+      <class name="com.juaracoding.test.authentications.SignInWithoutPasswordTest" />
+      <class name="com.juaracoding.test.authentications.SignInTest" />
       <!-- <class name="com.juaracoding.test.inventories.InventoryListTest" /> -->
     </classes>
   </test>
