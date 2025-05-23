@@ -1,5 +1,6 @@
 package com.juaracoding.test;
 
+import java.nio.channels.Pipe.SourceChannel;
 import java.util.List;
 
 import org.openqa.selenium.By;
@@ -12,7 +13,10 @@ public class ByLinkText extends BaseTest {
   public void testStep01() throws InterruptedException {
     Thread.sleep(2000);
     WebElement linkPertama = driver.findElement(By.linkText("click here"));
+    System.out.println(linkPertama.getAttribute("href"));
+    System.out.println(linkPertama.getAttribute("style"));
     // linkPertama.click()
+
     List<WebElement> daftarLinks = driver.findElements(By.linkText("click here"));
 
     for (WebElement element : daftarLinks) {
@@ -22,11 +26,27 @@ public class ByLinkText extends BaseTest {
     System.out.println(driver.getTitle());
   }
 
-  @Test
+  @Test(enabled = false)
   public void testStep02() {
     WebElement linkPertama = driver.findElement(By.partialLinkText("here"));
     System.out.println(linkPertama.getAttribute("href"));
     System.out.println(linkPertama.getAttribute("style"));
+
+    List<WebElement> daftarLinks = driver.findElements(By.partialLinkText("go"));
+    System.out.println(daftarLinks.size());
+  }
+
+  @Test
+  public void testStep03() {
+    WebElement linkPertama = driver.findElement(By.partialLinkText("tag"));
+    System.out.println(linkPertama.getAttribute("href"));
+    System.out.println(linkPertama.getAttribute("style"));
+    System.out.println(linkPertama.getText());
+
+    System.out.println("---------------------------");
+
+    List<WebElement> daftarLinks = driver.findElements(By.partialLinkText("tag"));
+    System.out.println(daftarLinks.size());
   }
 
 }
