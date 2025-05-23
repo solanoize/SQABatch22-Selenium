@@ -54,10 +54,29 @@ public class QuizDragDropTest extends BaseTest {
     dragger.perform();
   }
 
+  private void draggableSantui(String idDrag, String idDrop) {
+    WebElement draggable = driver.findElement(By.id(idDrag));
+    WebElement drop = driver.findElement(By.id(idDrop));
+    Actions builder = new Actions(driver);
+    builder.dragAndDrop(draggable, drop).perform();
+  }
+
+  private void customDragableSantui(String idDrag, String idDrop) {
+    // todo: tweakerrr :DDDD
+    // WebElement draggable = driver.findElement(By.id(idDrag));
+    // WebElement drop = driver.findElement(By.id(idDrop));
+    // Actions builder = new Actions(driver);
+    // builder.moveInTicks(source, 0, 0)
+    // .tick(builder.ActiongetActivePointer().createPointerDown(LEFT.asArg()))
+    // .moveInTicks(target, 0, 0)
+    // .tick(getActivePointer().createPointerUp(LEFT.asArg()));
+  }
+
   @Test
   public void mingguO2Test() throws InterruptedException {
     // box1 (oslo) - box101 (norway)
     // box2 (stockholm) - box102 (Sweden)
+    // actions.dragAndDrop(source, target).perform();
 
     String[][] keyElements = {
         { "box1", "box101" }, // (oslo - norway)
@@ -70,7 +89,7 @@ public class QuizDragDropTest extends BaseTest {
     };
 
     for (int row = 0; row < keyElements.length; row++) {
-      dragAndDrop(keyElements[row][0], keyElements[row][1]);
+      draggableSantui(keyElements[row][0], keyElements[row][1]);
       Thread.sleep(2000);
     }
 
