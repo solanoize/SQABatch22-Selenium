@@ -3,7 +3,10 @@
 <suite name="Suite Test Web eCommerce">
   <!-- <parameter name="url" value="https://demo.guru99.com/test/link.html"></parameter> -->
   <!-- <parameter name="url" value="https://demo.guru99.com/test/accessing-link.html"></parameter> -->
-  <parameter name="url" value="https://demo.guru99.com/test/block.html"></parameter>
+  <!-- <parameter name="url" value="https://demo.guru99.com/test/block.html"></parameter> -->
+  <!-- <parameter name="url" value="https://demo.guru99.com/test/newtours/"></parameter> -->
+  <parameter name="url"
+    value="http://www.dhtmlgoodies.com/scripts/drag-drop-custom/demo-drag-drop-3.html"></parameter>
 
 
   <!-- <test name="Fitur Radio Button">
@@ -30,7 +33,9 @@
   <test name="Pertemuan 16">
     <classes>
       <class name="com.juaracoding.test.Hook" />
-      <class name="com.juaracoding.test.ByLinkText" />
+      <!-- <class name="com.juaracoding.test.ByLinkText" /> -->
+      <!-- <class name="com.juaracoding.test.ActionTest" /> -->
+      <class name="com.juaracoding.test.QuizDragDropTest" />
     </classes>
   </test>
 
