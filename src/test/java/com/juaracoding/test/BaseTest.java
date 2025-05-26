@@ -28,3 +28,7 @@ public class BaseTest {
     driver = DriverSingleton.createOrGetDriver();
   }
 }
+
+/*
+ * semangat semangat
+ */
