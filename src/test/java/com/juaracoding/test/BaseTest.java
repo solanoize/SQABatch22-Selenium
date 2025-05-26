@@ -19,6 +19,10 @@ public class BaseTest {
   /*
    * halloo (tambah author pake extensi mas haha biar tau siapa yang push)
    */
+
+   /*
+   * haii
+   */
   @BeforeClass
   public void setup() {
     driver = DriverSingleton.createOrGetDriver();
