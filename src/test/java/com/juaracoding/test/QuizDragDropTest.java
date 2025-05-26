@@ -87,13 +87,13 @@ public class QuizDragDropTest extends BaseTest {
         { "box6", "box106" }, // (stockholm - sweden)
         { "box7", "box107" }, // (stockholm - sweden)
     };
+    ScreenshotHelper.takeScreenshot("mingguO2Test_before.png", driver);
 
     for (int row = 0; row < keyElements.length; row++) {
       draggableSantui(keyElements[row][0], keyElements[row][1]);
       Thread.sleep(2000);
     }
 
-    // TODO: balikin lagi ke semula!! yaach...
+    ScreenshotHelper.takeScreenshot("mingguO2Test_after.png", driver);
   }
-
 }
