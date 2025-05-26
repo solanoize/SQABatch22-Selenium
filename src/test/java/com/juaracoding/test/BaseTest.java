@@ -10,12 +10,15 @@ import org.testng.annotations.BeforeClass;
  */
 /*
  * ini Tata
+/**
+ * Ini komentar (yanwar)
  */
 public class BaseTest {
   WebDriver driver;
-/*
- * halloo (tambah author pake extensi mas haha biar tau siapa yang push)
- */
+
+  /*
+   * halloo (tambah author pake extensi mas haha biar tau siapa yang push)
+   */
   @BeforeClass
   public void setup() {
     driver = DriverSingleton.createOrGetDriver();
