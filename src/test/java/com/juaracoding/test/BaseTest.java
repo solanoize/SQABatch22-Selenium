@@ -13,6 +13,10 @@ import org.testng.annotations.BeforeClass;
 /**
  * Ini komentar (yanwar)
  */
+
+/**
+ * Ayam goreng kalasan.
+ */
 public class BaseTest {
   WebDriver driver;
 
