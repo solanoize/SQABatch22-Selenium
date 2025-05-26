@@ -7,7 +7,9 @@ import org.testng.annotations.BeforeClass;
 
 public class BaseTest {
   WebDriver driver;
-
+/*
+ * halloo
+ */
   @BeforeClass
   public void setup() {
     driver = DriverSingleton.createOrGetDriver();
