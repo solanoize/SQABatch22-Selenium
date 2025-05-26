@@ -5,6 +5,9 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.BeforeClass;
 
+/**
+ * Ini komentar (yanwar)
+ */
 public class BaseTest {
   WebDriver driver;
 
