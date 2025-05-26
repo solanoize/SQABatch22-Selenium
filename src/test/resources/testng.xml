@@ -7,6 +7,11 @@
   <!-- <parameter name="url" value="https://demo.guru99.com/test/newtours/"></parameter> -->
   <parameter name="url"
     value="http://www.dhtmlgoodies.com/scripts/drag-drop-custom/demo-drag-drop-3.html"></parameter>
+
+  <listeners>
+    <listener class-name="com.juaracoding.test.listeners.Hook"></listener>
+    <listener class-name="com.juaracoding.test.listeners.HookSS"></listener>
+  </listeners>
   <!-- <parameter name="url"
     value="https://demo.guru99.com/V4/index.php"></parameter> -->
 
@@ -34,7 +39,7 @@
 
   <test name="Pertemuan 16">
     <classes>
-      <class name="com.juaracoding.test.Hook" />
+      <!-- <class name="com.juaracoding.test.Hook" /> -->
       <!-- <class name="com.juaracoding.test.ByLinkText" /> -->
       <!-- <class name="com.juaracoding.test.ActionTest" /> -->
       <class name="com.juaracoding.test.QuizDragDropTest" />

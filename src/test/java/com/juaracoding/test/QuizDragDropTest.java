@@ -1,16 +1,28 @@
 package com.juaracoding.test;
 
+import java.sql.Driver;
 import java.time.Duration;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Action;
 import org.openqa.selenium.interactions.Actions;
 import org.testng.Assert;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
-public class QuizDragDropTest extends BaseTest {
+public class QuizDragDropTest {
+  WebDriver driver;
+
+  @BeforeClass
+  @Parameters({ "url" })
+  public void init(String url) {
+    driver = DriverSingleton.createOrGetDriver();
+    driver.get(url);
+  }
 
   @Test(enabled = false)
   public void testStep01() throws InterruptedException {
@@ -87,13 +99,10 @@ public class QuizDragDropTest extends BaseTest {
         { "box6", "box106" }, // (stockholm - sweden)
         { "box7", "box107" }, // (stockholm - sweden)
     };
-    ScreenshotHelper.takeScreenshot("mingguO2Test_before.png", driver);
 
     for (int row = 0; row < keyElements.length; row++) {
       draggableSantui(keyElements[row][0], keyElements[row][1]);
       Thread.sleep(2000);
     }
-
-    ScreenshotHelper.takeScreenshot("mingguO2Test_after.png", driver);
   }
 }
