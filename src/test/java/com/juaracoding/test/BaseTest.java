@@ -5,14 +5,18 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.BeforeClass;
 
+/*
+ * test conflict
+ */
 /**
  * Ini komentar (yanwar)
  */
 public class BaseTest {
   WebDriver driver;
-/*
- * halloo
- */
+
+  /*
+   * halloo (tambah author pake extensi mas haha biar tau siapa yang push)
+   */
   @BeforeClass
   public void setup() {
     driver = DriverSingleton.createOrGetDriver();
